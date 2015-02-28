@@ -76,8 +76,16 @@ sample# - corresponding voice samples
 | Shimmer (local) | Shimmer (local, dB) | Shimmer (apq3) | Shimmer (apq5) | Shimmer (apq11) | Shimmer (dda) |
 | 8.334           | 0.779               | 4.517          | 4.609          | 6.802           | 13.551        |
 
-features 12-14: AC,NTH,HTN, 
-features 15-19: Median pitch,Mean pitch,Standard deviation,Minimum pitch,Maximum pitch, 
+| Column 12 | Column 13 | Column 14 |
+|:---------:|:---------:|:---------:|
+| AC        | NTH       | HTN       |
+| 0.905905  | 0.119116  | 11.13     |
+
+| Column 15    | Column 16  | Column 17          | Column 18     | Column 19     |
+|:------------:|:----------:|:------------------:|:-------------:|:-------------:|
+| Median pitch | Mean pitch | Standard deviation | Minimum pitch | Maximum pitch |
+| 166.533      | 164.781    | 10.421             | 142.229       | 187.576       |
+
 features 20-23: Number of pulses,Number of periods,Mean period,Standard deviation of period, features 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degree of voice breaks 
 
 column 28: UPDRS 
@@ -118,8 +126,8 @@ column 28: class information
 
 ## Abbreviation meanings
 
-PWP - People with Parkinson's disease  
-UPDRS - Unified Parkinson's Disease Rating Scale
+*PWP* - People with Parkinson's disease  
+*UPDRS* - Unified Parkinson's Disease Rating Scale
 
 
 ## References
