@@ -60,11 +60,22 @@ sample# - corresponding voice samples
 
 
 ##### Training data syntax
-column 1: Subject id 
 
-colum 2-27: features 
-features 1-5: Jitter (local),Jitter (local, absolute),Jitter (rap),Jitter (ppq5),Jitter (ddp), 
-features 6-11: Shimmer (local),Shimmer (local, dB),Shimmer (apq3),Shimmer (apq5), Shimmer (apq11),Shimmer (dda), 
+| Column 0   |
+|:----------:|
+| Subject ID |
+|          1 |
+
+| Column 1       | Column 2                 | Column 3     | Column 4      | Column 5     |
+|:--------------:|:------------------------:|:------------:|:-------------:|:------------:|
+| Jitter (local) | Jitter (local, absolute) | Jitter (rap) | Jitter (ppq5) | Jitter (ddp) |
+| 1.488          | 0.000090213              | 0.9          | 0.794         | 2.699        |
+
+| Column 6        | Column 7            | Column 8       | Column 9       | Column 10       | Column 11     |
+|:---------------:|:-------------------:|:--------------:|:--------------:|:---------------:|:-------------:|
+| Shimmer (local) | Shimmer (local, dB) | Shimmer (apq3) | Shimmer (apq5) | Shimmer (apq11) | Shimmer (dda) |
+| 8.334           | 0.779               | 4.517          | 4.609          | 6.802           | 13.551        |
+
 features 12-14: AC,NTH,HTN, 
 features 15-19: Median pitch,Mean pitch,Standard deviation,Minimum pitch,Maximum pitch, 
 features 20-23: Number of pulses,Number of periods,Mean period,Standard deviation of period, features 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degree of voice breaks 
