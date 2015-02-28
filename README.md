@@ -23,6 +23,11 @@ Later, thinking and behavioral problems may arise, with dementia commonly occurr
 
 The PD database consists of **training** and **test** files.
 
+Further details are contained in the following reference. If you use the dataset, please cite: 
+Erdogdu Sakar, B., Isenkul, M., Sakar, C.O., Sertbas, A., Gurgen, F., Delil, S., Apaydin, H., Kursun, 
+O., 'Collection and Analysis of a Parkinson Speech Dataset with Multiple Types of Sound 
+Recordings', IEEE Journal of Biomedical and Health Informatics, vol. 17(4), pp. 828-834, 2013 
+
 
 #### Training data
 
@@ -36,16 +41,11 @@ The training data contains **40 entries**:
   - **10** female <img src="res/female-sign.png" height="20" >
   - **10** male <img src="res/male-sign.png" height="20" >
 
-From all subjects, multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken. A group of 26 linear and timeâ€“frequency based features are extracted from each voice sample. UPDRS ((Unified Parkinsonâ€™s Disease Rating Scale) score of each patient which is determined by expert physician is also available in this dataset. Therefore, this dataset can also be used for regression. 
+Multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are take from all subjects. A group of 26 linear and time frequency based features are extracted from each voice sample. The UPDRS score of each patient (which is determined by an expert physician) is also available in the dataset. Therefore, this dataset can also be used for regression. 
 
-After collecting the training dataset which consists of multiple types of sound recordings and performing our experiments, in line with the obtained findings we continued collecting an independent test set from PWP via the same physicianâ€™s examination process under the same conditions. During the collection of this dataset, 28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings. The same 26 features are extracted from voice samples of this dataset. This dataset can be used as an independent test set to validate the results obtained on training set. 
 
-Further details are contained in the following reference -- if you use this dataset, please cite: 
-Erdogdu Sakar, B., Isenkul, M., Sakar, C.O., Sertbas, A., Gurgen, F., Delil, S., Apaydin, H., Kursun, 
-O., 'Collection and Analysis of a Parkinson Speech Dataset with Multiple Types of Sound 
-Recordings', IEEE Journal of Biomedical and Health Informatics, vol. 17(4), pp. 828-834, 2013 
+##### File contents
 
-Training Data File: 
 Each subject has 26 voice samples including sustained vowels, numbers, words and short 
 sentences. The voice samples in the training data file are given in the 
 following order: 
@@ -58,7 +58,14 @@ sample# - corresponding voice samples
 14-17: short sentences 
 18-26: words 
 
-Test Data File: 
+
+#### Test data
+
+After collecting the training dataset which consists of multiple types of sound recordings and performing our experiments, in line with the obtained findings we continued collecting an independent test set from PWP via the same physician's examination process under the same conditions. During the collection of this dataset, 28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings. The same 26 features are extracted from voice samples of this dataset. This dataset can be used as an independent test set to validate the results obtained on training set. 
+
+
+##### File contents
+
 28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings (each subject has 6 voice samples) The voice samples in the test data file are given in the following order: 
 
 sample# - corresponding voice samples 
@@ -68,7 +75,7 @@ sample# - corresponding voice samples
 
 ### Attribute Information
 
-Training Data File: 
+#### Training data
 column 1: Subject id 
 
 colum 2-27: features 
@@ -81,7 +88,7 @@ features 20-23: Number of pulses,Number of periods,Mean period,Standard deviatio
 column 28: UPDRS 
 column 29: class information 
 
-Test Data File: 
+#### Test Data
 column 1: Subject id 
 
 colum 2-27: features 
@@ -94,12 +101,14 @@ features 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degre
 
 column 28: class information 
 
+
 ## Parkinson's disease diagnosis application
 
 
-## Notes
+## Abbreviation meanings
 
 PWP - People with Parkinson's disease
+UPDRS - Unified Parkinson's Disease Rating Scale
 
 
 ## References
