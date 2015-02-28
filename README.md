@@ -86,10 +86,20 @@ sample# - corresponding voice samples
 | Median pitch | Mean pitch | Standard deviation | Minimum pitch | Maximum pitch |
 | 166.533      | 164.781    | 10.421             | 142.229       | 187.576       |
 
-features 20-23: Number of pulses,Number of periods,Mean period,Standard deviation of period, features 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degree of voice breaks 
+| Column 20        | Column 21         | Column 22   | Column 23                    |
+|:----------------:|:-----------------:|:-----------:|:----------------------------:|
+| Number of pulses | Number of periods | Mean period | Standard deviation of period |
+| 160              | 159               | 0.006064725 | 0.000416276                  |
 
-column 28: UPDRS 
-column 29: class information 
+| Column 24                           | Column 25              | Column 26              |
+|:-----------------------------------:|:----------------------:|:----------------------:|
+| Fraction of locally unvoiced frames | Number of voice breaks | Degree of voice breaks |
+| 0                                   | 0                      | 0                      |
+
+| Column 27 | Column 28         |
+|:---------:|:-----------------:|
+| UPDRS     | Class information |
+| 23        | 1                 |
 
 
 #### Test data
