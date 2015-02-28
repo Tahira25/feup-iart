@@ -61,15 +61,22 @@ sample# - corresponding voice samples
 
 ##### Training data syntax
 
+
+###### Subject ID
+
 | Column 0   |
 |:----------:|
-| Subject ID |
-|          1 |
+| 1          |
 
-| Column 1       | Column 2                 | Column 3     | Column 4      | Column 5     |
-|:--------------:|:------------------------:|:------------:|:-------------:|:------------:|
-| Jitter (local) | Jitter (local, absolute) | Jitter (rap) | Jitter (ppq5) | Jitter (ddp) |
-| 1.488          | 0.000090213              | 0.9          | 0.794         | 2.699        |
+
+###### Jitter
+
+| Column 1 | Column 2        | Column 3 | Column 4 | Column 5 |
+|:--------:|:---------------:|:--------:|:--------:|:--------:|
+| local    | local, absolute | rap      | ppq5     | ddp      |
+| 1.488    | 0.000090213     | 0.9      | 0.794    | 2.699    |
+
+###### Shimmer
 
 | Column 6        | Column 7            | Column 8       | Column 9       | Column 10       | Column 11     |
 |:---------------:|:-------------------:|:--------------:|:--------------:|:---------------:|:-------------:|
@@ -109,11 +116,11 @@ After collecting the training dataset which consists of multiple types of sound 
 
 ##### File contents
 
-28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings (each subject has 6 voice samples) The voice samples in the test data file are given in the following order: 
+28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings (each subject has 6 voice samples). The voice samples in the test data file are given in the following order: 
 
 sample# - corresponding voice samples 
-1-3: sustained vowel (aaaâ€¦â€¦) 
-4-6: sustained vowel (oooâ€¦â€¦) 
+1-3: sustained vowel (aaaa) 
+4-6: sustained vowel (oooo) 
 
 
 #### Test Data syntax
@@ -136,7 +143,8 @@ column 28: class information
 
 ## Abbreviation meanings
 
-*PWP* - People with Parkinson's disease  
+*PD* - Parkinson's Disease  
+*PWP* - People With Parkinson's disease  
 *UPDRS* - Unified Parkinson's Disease Rating Scale
 
 
