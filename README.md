@@ -29,12 +29,12 @@ The PD database consists of **training** and **test** files.
 The training data contains **40 entries**:
 
 - **20** ill individuals
-  - **6** female
-  - **14** male
+  - **6** female <img src="res/female-sign.png" height="20" >
+  - **14** male <img src="res/male-sign.png" height="20" >
 
 - **20** healthy individuals
-  - **10** female
-  - **10** male
+  - **10** female <img src="res/female-sign.png" height="20" >
+  - **10** male <img src="res/male-sign.png" height="20" >
 
 From all subjects, multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken. A group of 26 linear and timeâ€“frequency based features are extracted from each voice sample. UPDRS ((Unified Parkinsonâ€™s Disease Rating Scale) score of each patient which is determined by expert physician is also available in this dataset. Therefore, this dataset can also be used for regression. 
 
