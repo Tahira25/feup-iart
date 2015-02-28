@@ -16,12 +16,27 @@ Later, thinking and behavioral problems may arise, with dementia commonly occurr
 
 ## Parkinson's disease speech data set
 
-Multiple types of sound recordings of Parkinson speech can be found at:  
-[UCI Machine Learning Repository][2].
+[UCI Machine Learning Repository][2] provides multiple types of sound recordings of Parkinson speech.
 
-Data Set Information:
 
-The PD database consists of training and test files. The training data belongs to 20 PWP (6 female, 14 male) and 20 healthy individuals (10 female, 10 male) who appealed at the Department of Neurology in Cerrahpasa Faculty of Medicine, Istanbul University. From all subjects, multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken. A group of 26 linear and timeâ€“frequency based features are extracted from each voice sample. UPDRS ((Unified Parkinsonâ€™s Disease Rating Scale) score of each patient which is determined by expert physician is also available in this dataset. Therefore, this dataset can also be used for regression. 
+### Data Set Information
+
+The PD database consists of **training** and **test** files.
+
+
+#### Training data
+
+The training data contains **40 entries**:
+
+- **20** ill individuals
+  - **6** female
+  - **14** male
+
+- **20** healthy individuals
+  - **10** female
+  - **10** male
+
+From all subjects, multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken. A group of 26 linear and timeâ€“frequency based features are extracted from each voice sample. UPDRS ((Unified Parkinsonâ€™s Disease Rating Scale) score of each patient which is determined by expert physician is also available in this dataset. Therefore, this dataset can also be used for regression. 
 
 After collecting the training dataset which consists of multiple types of sound recordings and performing our experiments, in line with the obtained findings we continued collecting an independent test set from PWP via the same physicianâ€™s examination process under the same conditions. During the collection of this dataset, 28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings. The same 26 features are extracted from voice samples of this dataset. This dataset can be used as an independent test set to validate the results obtained on training set. 
 
@@ -51,7 +66,7 @@ sample# - corresponding voice samples
 4-6: sustained vowel (oooâ€¦â€¦) 
 
 
-Attribute Information:
+### Attribute Information
 
 Training Data File: 
 column 1: Subject id 
@@ -80,6 +95,11 @@ features 24-26: Fraction of locally unvoiced frames,Number of voice breaks,Degre
 column 28: class information 
 
 ## Parkinson's disease diagnosis application
+
+
+## Notes
+
+PWP - People with Parkinson's disease
 
 
 ## References
