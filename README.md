@@ -19,7 +19,7 @@ Later, thinking and behavioral problems may arise, with dementia commonly occurr
 [UCI Machine Learning Repository][2] provides multiple types of sound recordings of Parkinson speech.
 
 
-### 2.1 Data set information
+### 2.1. Data set information
 
 The PD database consists of **training** and **test** files.
 
