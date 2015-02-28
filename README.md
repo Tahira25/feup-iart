@@ -5,6 +5,8 @@ A repository to host IART projects.
 
 ## Parkinson's disease
 
+<img src="res/pd-logo.jpg" align="left" width="100" style="margin: 10px;" >
+
 Parkinson's disease (PD) is a degenerative disorder of the central nervous system.
 
 Early in the course of the disease, the most obvious symptoms are movement-related; these include shaking, rigidity, slowness of movement and difficulty with walking and gait.
