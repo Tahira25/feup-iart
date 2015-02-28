@@ -9,7 +9,7 @@ Parkinson's disease (PD) is a degenerative disorder of the central nervous syste
 
 Early in the course of the disease, the most obvious symptoms are movement-related; these include shaking, rigidity, slowness of movement and difficulty with walking and gait.
 
-<img src="res/parkinsons-symptoms.jpg" align="middle" height="350" >
+<img src="res/parkinsons-symptoms.jpg" height="350" >
 
 Later, thinking and behavioral problems may arise, with dementia commonly occurring in the advanced stages of the disease, whereas depression is the most common psychiatric symptom.
 
