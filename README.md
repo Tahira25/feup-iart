@@ -3,7 +3,7 @@
 A repository to host IART projects.
 
 
-## <img src="res/pd-logo.jpg" height="50" > 1. Parkinson's disease
+## 1. Parkinson's disease <img src="res/pd-logo.jpg" height="50" >
 
 Parkinson's disease (PD) is a degenerative disorder of the central nervous system.
 
@@ -19,11 +19,11 @@ Later, thinking and behavioral problems may arise, with dementia commonly occurr
 [UCI Machine Learning Repository][2] provides multiple types of sound recordings of Parkinson speech.
 
 
-### 2.1 Data Set Information
+### 2.1 Data set information
 
 The PD database consists of **training** and **test** files.
 
-#### 2.1.1. Training data
+#### 2.1.A Training data
 
 The training data contains **40 entries**:
 
@@ -38,14 +38,14 @@ The training data contains **40 entries**:
 Multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken from all subjects. A group of 26 linear and time frequency based features are extracted from each voice sample. The UPDRS score of each patient (which is determined by an expert physician) is also available in the dataset. Therefore, this dataset can also be used for regression. 
 
 
-#### 2.1.2. Test data
+#### 2.1.B Test data
 
 After collecting the training dataset which consists of multiple types of sound recordings and performing our experiments, in line with the obtained findings we continued collecting an independent test set from PWP via the same physician's examination process under the same conditions. During the collection of this dataset, 28 PD patients are asked to say only the sustained vowels 'a' and 'o' three times respectively which makes a total of 168 recordings. The same 26 features are extracted from voice samples of this dataset. This dataset can be used as an independent test set to validate the results obtained on training set. 
 
 
-#### 2.1.3. Training and test data syntax
+### 2.2. Data set syntax
 
-##### 2.1.3.A Common syntax
+#### 2.2.A Common syntax
 
 ###### Subject ID
 
@@ -102,7 +102,7 @@ After collecting the training dataset which consists of multiple types of sound 
 | 0                                   | 0                      | 0                      |
 
 
-##### 2.1.3.B Training data specific syntax
+#### 2.2.B Training data specific syntax
 
 ###### UPDRS and class information
 
@@ -112,7 +112,7 @@ After collecting the training dataset which consists of multiple types of sound 
 | 23        | 1                 |
 
 
-##### 2.1.3.C Test data specific syntax
+#### 2.2.C Test data specific syntax
 
 ###### Class information
 
