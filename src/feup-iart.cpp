@@ -7,11 +7,11 @@
 std::vector<std::string> split(const std::string& str,
 		const std::string& separators) {
 	// convert the passed string to a c string
-	char *CStr = new char[str.length() + 1];
-	strcpy(CStr, str.c_str());
+	char *cStr = new char[str.length() + 1];
+	strcpy(cStr, str.c_str());
 
 	std::vector<std::string> tokens;
-	char *p = strtok(CStr, separators.c_str());
+	char *p = strtok(cStr, separators.c_str());
 
 	while (p) {
 		tokens.push_back(p);
@@ -20,7 +20,7 @@ std::vector<std::string> split(const std::string& str,
 	}
 
 	// delete the no longer used c string
-	delete[] CStr;
+	delete[] cStr;
 
 	return tokens;
 }
