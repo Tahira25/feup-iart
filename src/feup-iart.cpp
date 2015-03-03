@@ -39,33 +39,49 @@ std::vector<std::string> split(const std::string& str,
 	return tokens;
 }
 
+#include <iomanip>
+
 int main() {
 	std::ifstream dataFile;
 	dataFile.open("parkinson-data/train-data.txt");
 
-	std::string line;
-	dataFile >> line;
+	if (dataFile.good()) {
+		std::vector<std::vector<float>> trainData;
 
-	dataFile.close();
+		while (!dataFile.eof()) {
+			std::string entryStr;
+			dataFile >> entryStr;
 
-	/*
-	 * C++11 introduced 'rvalue references' that let a mutable reference be bound to an rvalue.
-	 * rvalue references use the && syntax instead of just &.
-	 *
-	 * In this particular case, before C++11 was introduced, doing something like
-	 * std::vector<std::string> entryTokens = split(line, ","); would copy the temporary vector
-	 * built inside the split function to entryTokens, and then destroy the temporary vector.
-	 * That is not very smart! Why copy and then destroy the vector, when it could be *moved*
-	 * to entryTokens instead? That is exactly what the rvalue references are used for.
-	 */
-	std::vector<std::string>&& entryTokens = split(line, ",");
+			/*
+			 * C++11 introduced 'rvalue references' that let a mutable reference be bound to an rvalue.
+			 * rvalue references use the && syntax instead of just &.
+			 *
+			 * In this particular case, before C++11 was introduced, doing something like
+			 * std::vector<std::string> entryTokens = split(line, ","); would copy the temporary vector
+			 * built inside the split function to entryTokens, and then destroy the temporary vector.
+			 * That is not very smart! Why copy and then destroy the vector, when it could be *moved*
+			 * to entryTokens instead? That is exactly what the rvalue references are used for.
+			 */
+			std::vector<std::string>&& entryTokens = split(entryStr, ",");
 
-	std::vector<float> entryData;
-	for (auto str : entryTokens)
-		entryData.push_back(stof(str));
+			std::vector<float> entryData;
+			for (auto str : entryTokens)
+				entryData.push_back(stof(str));
 
-	for (auto i : entryData)
-		std::cout << i << std::endl;
+			trainData.push_back(entryData);
+		}
+
+		dataFile.close();
+
+		for (auto entry : trainData) {
+			for (auto i : entry)
+				std::cout << i << " ";
+			std::cout << std::endl;
+		}
+	} else {
+		std::cerr << "Error: Could not read training data." << std::endl;
+		return -1;
+	}
 
 	return 0;
 }
