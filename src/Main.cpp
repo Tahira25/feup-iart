@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Utils.h"
+#include "Values.h"
 
 float entropy(int yes, int no) {
 	int total = yes + no;
@@ -15,16 +16,16 @@ float entropy(int yes, int no) {
 			- noByTotal * Utils::logBase2(noByTotal);
 }
 
-int main() {
-	std::ifstream dataFile;
-	dataFile.open("parkinson-data/train-data.txt");
+std::vector<std::vector<float>> loadData(std::string filePath) {
+	std::vector<std::vector<float>> data;
 
-	if (dataFile.good()) {
-		std::vector<std::vector<float>> trainData;
+	std::ifstream file;
+	file.open(filePath);
 
-		while (!dataFile.eof()) {
+	if (file.good()) {
+		while (!file.eof()) {
 			std::string entryStr;
-			dataFile >> entryStr;
+			file >> entryStr;
 
 			/*
 			 * C++11 introduced 'rvalue references' that let a mutable reference be bound to an rvalue.
@@ -43,19 +44,28 @@ int main() {
 			for (auto str : entryTokens)
 				entryData.push_back(stof(str));
 
-			trainData.push_back(entryData);
+			data.push_back(entryData);
 		}
+	} else {
+		std::cerr << "Error: Could not read from " << filePath << std::endl;
+	}
 
-		dataFile.close();
+	file.close();
 
+	return data;
+}
+
+int main() {
+	std::vector<std::vector<float>>&& trainData = loadData(
+			Values::TRAIN_DATA_PATH);
+
+	if (!trainData.empty()) {
+		// print train data
 		for (auto entry : trainData) {
 			for (auto i : entry)
 				std::cout << i << " ";
 			std::cout << std::endl;
 		}
-	} else {
-		std::cerr << "Error: Could not read training data." << std::endl;
-		return -1;
 	}
 
 	return 0;
