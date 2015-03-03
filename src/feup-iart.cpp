@@ -1,8 +1,22 @@
 #include <iostream>
+#include <cmath>
 #include <cstring>
 #include <fstream>
 #include <vector>
 #include <string>
+
+constexpr float logBase2(float x) {
+	return log(x) / log(2);
+}
+
+float entropy(int yes, int no) {
+	int total = yes + no;
+
+	float yesByTotal = static_cast<float>(yes) / total;
+	float noByTotal = static_cast<float>(no) / total;
+
+	return -yesByTotal * logBase2(yesByTotal) - noByTotal * logBase2(noByTotal);
+}
 
 std::vector<std::string> split(const std::string& str,
 		const std::string& separators) {
