@@ -4,7 +4,8 @@
 
 namespace Values {
 
-const std::string TRAIN_DATA_PATH = "parkinson-data/train-data.txt";
-const std::string TEST_DATA_PATH = "parkinson-data/test-data.txt";
+const std::string DATA_FOLDER = "parkinson-data/";
+const std::string TRAIN_DATA_PATH = DATA_FOLDER + "train-data.txt";
+const std::string TEST_DATA_PATH = DATA_FOLDER + "test-data.txt";
 
 }
