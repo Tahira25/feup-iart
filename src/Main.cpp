@@ -1,13 +1,9 @@
 #include <iostream>
-#include <cmath>
-#include <cstring>
 #include <fstream>
 #include <vector>
 #include <string>
 
-constexpr float logBase2(float x) {
-	return log(x) / log(2);
-}
+#include "Utils.h"
 
 float entropy(int yes, int no) {
 	int total = yes + no;
@@ -15,31 +11,9 @@ float entropy(int yes, int no) {
 	float yesByTotal = static_cast<float>(yes) / total;
 	float noByTotal = static_cast<float>(no) / total;
 
-	return -yesByTotal * logBase2(yesByTotal) - noByTotal * logBase2(noByTotal);
+	return -yesByTotal * Utils::logBase2(yesByTotal)
+			- noByTotal * Utils::logBase2(noByTotal);
 }
-
-std::vector<std::string> split(const std::string& str,
-		const std::string& separators) {
-	// convert the passed string to a c string
-	char *cStr = new char[str.length() + 1];
-	strcpy(cStr, str.c_str());
-
-	std::vector<std::string> tokens;
-	char *p = strtok(cStr, separators.c_str());
-
-	while (p) {
-		tokens.push_back(p);
-
-		p = strtok(nullptr, separators.c_str());
-	}
-
-	// delete the no longer used c string
-	delete[] cStr;
-
-	return tokens;
-}
-
-#include <iomanip>
 
 int main() {
 	std::ifstream dataFile;
@@ -62,7 +36,8 @@ int main() {
 			 * That is not very smart! Why copy and then destroy the vector, when it could be *moved*
 			 * to entryTokens instead? That is exactly what the rvalue references are used for.
 			 */
-			std::vector<std::string>&& entryTokens = split(entryStr, ",");
+			std::vector<std::string>&& entryTokens = Utils::splitString(
+					entryStr, ",");
 
 			std::vector<float> entryData;
 			for (auto str : entryTokens)
