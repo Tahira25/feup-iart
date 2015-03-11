@@ -131,7 +131,19 @@ After collecting the training dataset which consists of multiple types of sound 
 *UPDRS* - Unified Parkinson's Disease Rating Scale
 
 
-## 5. References
+## 5. Troubleshooting
+
+#### Eclipse "Problems" tab shows errors but compiles
+
+- Go to **Project > Properties > C/C++ General > Preprocessor Include Paths, Macros Etc.**
+- Switch to the **Providers** tab
+- Select **CDT GCC Built-in Compiler Settings**
+- Click the link **Workspace Settings**
+- Select **CDT GCC Built-in Compiler Settings** (again)
+- Under **Command to get compiler specs:** add **-std=c++11**
+
+
+## 6. References
 
 - http://en.wikipedia.org/wiki/Parkinson%27s_disease
 - http://archive.ics.uci.edu/ml/datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings
