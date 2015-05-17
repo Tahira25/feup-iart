@@ -1,0 +1,38 @@
+class information.						| the target attribute
+
+subject id:								label.
+
+jitter local:							continuous.
+jitter local absolute:					continuous.
+jitter rap:								continuous.
+jitter ppq5:							continuous.
+jitter ddp:								continuous.
+
+shimmer local:							continuous.
+shimmer local db:						continuous.
+shimmer apq3:							continuous.
+shimmer apq5:							continuous.
+shimmer apq11:							continuous.
+shimmer dda:							continuous.
+
+ac:										continuous.
+nth:									continuous.
+htn:									continuous.
+
+median pitch:							continuous.
+mean pitch:								continuous.
+standard deviation:						continuous.
+minimum pitch:							continuous.
+maximum pitch:							continuous.
+
+number of pulses:						continuous.
+number of periods:						continuous.
+mean period:							continuous.
+standard deviation of period:			continuous.
+
+fraction of locally unvoiced frames:	continuous.
+number of voice breaks:					continuous.
+degree of voice breaks:					continuous.
+
+updrs:									ignore.
+class information:						0, 1.

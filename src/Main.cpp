@@ -6,16 +6,6 @@
 #include "Utils.h"
 #include "Values.h"
 
-float entropy(int yes, int no) {
-	int total = yes + no;
-
-	float yesByTotal = static_cast<float>(yes) / total;
-	float noByTotal = static_cast<float>(no) / total;
-
-	return -yesByTotal * Utils::logBase2(yesByTotal)
-			- noByTotal * Utils::logBase2(noByTotal);
-}
-
 std::vector<std::vector<float>> loadData(std::string filePath) {
 	std::vector<std::vector<float>> data;
 
@@ -56,17 +46,28 @@ std::vector<std::vector<float>> loadData(std::string filePath) {
 }
 
 int main() {
-	std::vector<std::vector<float>>&& trainData = loadData(
-			Values::TRAIN_DATA_PATH);
+	/*
+	 std::vector<std::vector<float>>&& trainData = loadData(
+	 Values::TRAIN_DATA_PATH);
 
-	if (!trainData.empty()) {
-		// print train data
-		for (auto entry : trainData) {
-			for (auto i : entry)
-				std::cout << i << " ";
-			std::cout << std::endl;
-		}
-	}
+	 if (!trainData.empty()) {
+	 // print train data
+	 for (auto entry : trainData) {
+	 for (auto i : entry)
+	 std::cout << i << " ";
+	 std::cout << std::endl;
+	 }
+	 }
+	 */
+
+	std::string input = Values::DATA_FOLDER + "input/parkinson";
+	std::string output = Values::DATA_FOLDER + "output/out.txt";
+
+	std::string cmd = "c50/c5.0 -f " + input + " > " + output;
+
+	system(cmd.c_str());
+
+	std::cout << "Done." << std::endl;
 
 	return 0;
 }
