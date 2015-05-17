@@ -1,5 +1,5 @@
 
-C5.0 [Release 2.07 GPL Edition]  	Sun May 17 15:25:52 2015
+C5.0 [Release 2.07 GPL Edition]  	Sun May 17 16:09:53 2015
 -------------------------------
 
     Options:
@@ -172,6 +172,21 @@ Evaluation on training data (1040 cases):
 	      3%  shimmer apq3
 	      3%  jitter ddp
 	      1%  nth
+
+
+Evaluation on test data (168 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    55   74(44.0%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	                (a): class 0
+	    74    94    (b): class 1
 
 
 Time: 0.1 secs
