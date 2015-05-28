@@ -9,7 +9,7 @@ int main() {
 	std::string input = Values::DATA_FOLDER + "input/parkinson";
 	std::string options = "";
 
-	std::string output = Values::DATA_FOLDER + "output/results.txt";
+	std::string output = Values::DATA_FOLDER + "results.txt";
 
 	std::string cmd = "c50/c5.0 -f " + input + " " + options + " > " + output;
 
