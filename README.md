@@ -3,13 +3,13 @@
 A repository to host IART projects.
 
 
-## 1. Parkinson's disease <img src="res/pd-logo.jpg" height="50" >
+## 1. Parkinson's disease <img src="readme-res/pd-logo.jpg" height="50" >
 
 Parkinson's disease (PD) is a degenerative disorder of the central nervous system.
 
 Early in the course of the disease, the most obvious symptoms are movement-related; these include shaking, rigidity, slowness of movement and difficulty with walking and gait.
 
-<img src="res/parkinsons-symptoms.jpg" height="350" >
+<img src="readme-res/parkinsons-symptoms.jpg" height="350" >
 
 Later, thinking and behavioral problems may arise, with dementia commonly occurring in the advanced stages of the disease, whereas depression is the most common psychiatric symptom.
 
@@ -28,12 +28,12 @@ The PD database consists of **training** and **test** files.
 The training data contains **40 entries**:
 
 - **20** ill individuals
-  - **6** female <img src="res/female-sign.png" height="20" >
-  - **14** male <img src="res/male-sign.png" height="20" >
+  - **6** female <img src="readme-res/female-sign.png" height="20" >
+  - **14** male <img src="readme-res/male-sign.png" height="20" >
 
 - **20** healthy individuals
-  - **10** female <img src="res/female-sign.png" height="20" >
-  - **10** male <img src="res/male-sign.png" height="20" >
+  - **10** female <img src="readme-res/female-sign.png" height="20" >
+  - **10** male <img src="readme-res/male-sign.png" height="20" >
 
 Multiple types of sound recordings (26 voice samples including sustained vowels, numbers, words and short sentences) are taken from all subjects. A group of 26 linear and time frequency based features are extracted from each voice sample. The UPDRS score of each patient (which is determined by an expert physician) is also available in the dataset. Therefore, this dataset can also be used for regression. 
 
