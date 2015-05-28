@@ -2,3 +2,6 @@
 *.rules
 *.tmp
 *.tree
+
+# c5 results
+results.txt
