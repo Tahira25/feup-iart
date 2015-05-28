@@ -1,3 +1,7 @@
+# c5 generated files
 *.rules
 *.tmp
 *.tree
+
+# c5 output file
+results.txt
