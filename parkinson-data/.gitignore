@@ -4,4 +4,4 @@
 *.tree
 
 # c5 results
-results.txt
+*results.txt

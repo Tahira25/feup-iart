@@ -7,9 +7,9 @@
 int main() {
 	// https://www.rulequest.com/see5-unix.html
 	std::string input = Values::DATA_FOLDER + "input/parkinson";
-	std::string options = "";
+	std::string options = "-p";
 
-	std::string output = Values::DATA_FOLDER + "results.txt";
+	std::string output = Values::DATA_FOLDER + options + "_results.txt";
 
 	std::string cmd = "c50/c5.0 -f " + input + " " + options + " > " + output;
 
